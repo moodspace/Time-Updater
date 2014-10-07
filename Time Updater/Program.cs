@@ -10,8 +10,29 @@ namespace Time_Updater
     {
         static void Main(string[] args)
         {
+            string loc = "NY";
+            using (System.IO.StreamReader sr = new System.IO.StreamReader("loc.txt"))
+            {
+                bool findLine = false;
+                while (!sr.EndOfStream || !findLine) 
+                {
+                    string tmp = sr.ReadLine().Trim();
+                    if (!tmp.StartsWith("//"))
+                    {
+                        findLine = true;
+                        loc = tmp.Substring(tmp.LastIndexOf("\t") + 1);
+                    }
+                }
+            }
+
             Engines.Worldtimeserver wts = new Engines.Worldtimeserver();
-            String timeStr = wts.GetResponse("US-NY");
+
+            String timeStr;
+            if (!loc.StartsWith("/")) //domestic
+                timeStr = wts.GetResponse("US-" + loc);
+            else //foreign
+                timeStr = wts.GetResponse(loc.Substring(1));
+
             DateTime time = Convert.ToDateTime(timeStr);
             time = time.AddSeconds(DateTime.Now.Second - time.Second);
             time = time.ToUniversalTime();

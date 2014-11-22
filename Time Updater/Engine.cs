@@ -215,17 +215,12 @@ namespace Time_Updater
                 {
                     Fetch(arg);
                     string temp = Engine.FilterHTMLContent(_rawStr, "span", -1, new Pair<string>("class", "\"font7\""));
-                    //temp = Engine.FilterHTMLContent(temp, "div", 5, null);
-                    //temp = Engine.FilterHTMLContent(temp, "p", 1, null);
-                    //temp = Engine.rx_shortTags.Replace(temp, "");
-                    //Regex rx2 = new Regex("\\[\\d+\\]");
-                    //temp = rx2.Replace(temp, "");
                     temp = Engine.RemoveEmptyLines(temp);
                     return Regex.Split(temp, "\n")[1].Trim();
                 }
                 catch
                 {
-                    return "Not found!";
+                    return DateTime.Now.ToShortTimeString();
                 }
             }
         }

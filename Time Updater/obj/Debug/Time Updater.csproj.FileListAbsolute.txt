@@ -2,3 +2,8 @@ P:\usr\Dropbox\Documents\Visual Studio 2013\Projects\Time Updater\Time Updater\b
 P:\usr\Dropbox\Documents\Visual Studio 2013\Projects\Time Updater\Time Updater\bin\Debug\Time Updater.pdb
 P:\usr\Dropbox\Documents\Visual Studio 2013\Projects\Time Updater\Time Updater\obj\Debug\Time Updater.exe
 P:\usr\Dropbox\Documents\Visual Studio 2013\Projects\Time Updater\Time Updater\obj\Debug\Time Updater.pdb
+P:\usr\Dropbox\Documents\GitHub\Time-Updater\Time Updater\bin\Debug\Time Updater.exe
+P:\usr\Dropbox\Documents\GitHub\Time-Updater\Time Updater\bin\Debug\Time Updater.pdb
+P:\usr\Dropbox\Documents\GitHub\Time-Updater\Time Updater\obj\Debug\Time Updater.exe
+P:\usr\Dropbox\Documents\GitHub\Time-Updater\Time Updater\obj\Debug\Time Updater.pdb
+P:\usr\Dropbox\Documents\GitHub\Time-Updater\Time Updater\obj\Debug\Time Updater.csprojResolveAssemblyReference.cache

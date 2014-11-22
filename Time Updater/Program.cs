@@ -11,7 +11,8 @@ namespace Time_Updater
         static void Main(string[] args)
         {
             string loc = "NY";
-            using (System.IO.StreamReader sr = new System.IO.StreamReader("loc.txt"))
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(
+                System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "loc.txt")))
             {
                 bool findLine = false;
                 while (!sr.EndOfStream || !findLine) 
